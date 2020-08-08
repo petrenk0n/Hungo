@@ -24,15 +24,21 @@
     width: 50px;
     height: 50px;
     border: 2px dashed white;
-    border-radius: 50%;
+    border-radius: 30%;
     position: absolute;
     margin: 300px auto; 
     margin-left: 50%;
     padding: 40px;
+    background-color: white;
 }
 
-.dz-button {
-    height: 20px;
-    width: 20px;
-    margin-right: 30px;
+.drag-border {
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.drag-image {
+    height: 60px;
+    margin: -28px;
+    margin-bottom: 30px;
 }
