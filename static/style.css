@@ -15,3 +15,8 @@
     font-family: "KeepCalm-Medium";
     src: url("KeepCalm-Medium.woff");
 }
+
+.image {
+    text-align: center;
+
+}
