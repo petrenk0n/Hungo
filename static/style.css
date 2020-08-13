@@ -1,14 +1,13 @@
-.navbar {
-    margin: 20px;
-    padding: 20px;
-}
-
-.navbar-brand {
+.hungoLogo h1 {
+    position: absolute;
     font-family: "KeepCalm-Medium";
-    font-size: 30px;
-    font-style: normal;
-    font-weight: normal;
-    color: #000000;
+    text-decoration: none;
+    z-index: 1;
+    color: white;
+    padding-left: 150px;
+    padding-top: 50px;
+    font-size: 64px;
+    
 }
 
 @font-face {
@@ -16,8 +15,27 @@
     src: url("KeepCalm-Medium.woff");
 }
 
+    /* font-family: "KeepCalm-Medium";
+    font-size: 64px; */
+
+.scroll {
+    position: absolute;
+}
+
+#foodVideo {
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    background-attachment: fixed;
+    z-index: -1;
+    background-size: cover;
+    filter:brightness(60%);
+}
+
 .image {
-    text-align: center;
+    align-items: center;
+    margin-top: 500px;
 }
 
 .dropzone {
