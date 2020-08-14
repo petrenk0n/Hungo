@@ -13,45 +13,31 @@
     {{ dropzone.style('border: 2px dashed #0087F7; margin: 10%; min-height: 400px;') }} -->
 </head>
 <body>
-    <!-- Navigation -->
-    <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
-        <a class="navbar-brand" href="#">hungo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-             "ml-auto for right postion of navigation items" -->
-          <!-- <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav> --> 
-
+      <!-- Logo -->
       <div class="hungoLogo">
-        <h1>
-          hungo
-        </h1>
+        <h1>hungo</h1>
       </div>
 
+      <!-- Background video -->
       <div class="foodVideo">
       <video autoplay muted lopp id="foodVideo">
-        <source src="/static/video.mp4" type="video/mp4">
+        <source src="../static/video.mp4" type="video/mp4">
       </video>
+      <!-- Explanation paragraph -->
+      <div class="explanationParagraph">
+        <p>Find new restaurants <br> by image.</p>
+      </div>
     </div>
 
-    <div class="scroll">
-      <img src="../static/scroll.svg" alt="scrolImg">
+    <!-- Scroll arrow -->
+    <div class="scrollArrow">
+      <img src="../static/scroll.svg" alt="scrolImg" id="arrowImage">
     </div>
 
       <!-- Blob Background -->
-      <div class="image">
+      <div class="dropImageZone">
         <img src="../static/blobs.svg">
-        {{ dropzone.create(action_view='index') }}
+        <!-- {{ dropzone.create(action_view='index') }} -->
       </div>
 </body>
 </html>

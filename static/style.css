@@ -1,4 +1,4 @@
-.hungoLogo h1 {
+.hungoLogo {
     position: absolute;
     font-family: "KeepCalm-Medium";
     text-decoration: none;
@@ -6,7 +6,7 @@
     color: white;
     padding-left: 150px;
     padding-top: 50px;
-    font-size: 64px;
+    font-size: 44px;
     
 }
 
@@ -18,8 +18,15 @@
     /* font-family: "KeepCalm-Medium";
     font-size: 64px; */
 
-.scroll {
+.scrollArrow {
     position: absolute;
+    z-index: 1;
+    top: 95%;
+    left: 50%;
+}
+
+#arrowImage {
+    height: 10px;
 }
 
 #foodVideo {
@@ -33,30 +40,17 @@
     filter:brightness(60%);
 }
 
-.image {
+.explanationParagraph {
+    z-index: 1;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    font-family: "KeepCalm-Medium";
+    font-size: 64px;
+    color: white;
+}
+
+.dropImageZone {
     align-items: center;
     margin-top: 500px;
-}
-
-.dropzone {
-    width: 50px;
-    height: 50px;
-    border: 2px dashed white;
-    border-radius: 30%;
-    position: absolute;
-    margin: 300px auto; 
-    margin-left: 50%;
-    padding: 40px;
-    background-color: white;
-}
-
-.drag-border {
-    border: 2px solid white;
-    border-radius: 50%;
-}
-
-.drag-image {
-    height: 60px;
-    margin: -28px;
-    margin-bottom: 30px;
 }
