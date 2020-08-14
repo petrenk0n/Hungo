@@ -16,6 +16,8 @@
         <h1>hungo</h1>
       </div>
 
+      <div class="cursor"></div>
+   
       <!-- Background video -->
       <div class="foodVideo">
       <video autoplay muted loop id="foodVideo">
@@ -23,7 +25,7 @@
       </video>
       <!-- Explanation paragraph -->
       <div class="explanationParagraph">
-        <p>Find new restaurants <br> by image.</p>
+        <p>Find new restaurants <br> from an image of food.</p>
       </div>
     </div>
 
@@ -33,11 +35,13 @@
     </div>
 
       <!-- Drag and drop zone -->
-      <div class="dropImageZone">
+    <div class="secondSection">
+      <div class="dropImageZone container">
         <form method=POST enctype=multipart/form-data action ="{{url_for('upload')}}">
           <input type=file name=photo>
           <input type="submit">
         </form>
       </div>
+    </div>
 </body>
 </html>
