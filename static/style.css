@@ -75,3 +75,18 @@ html, body {
     padding-bottom: 280px;
     background:#E77A7A;
 }
+
+.identifyButton a {
+    text-decoration: none;
+    border: 2px solid #E77A7A;
+    border-radius: 90px;
+    padding: 20px;
+    margin-top: 50px;
+    width: 200px;
+    background: #E77A7A;
+    color: white;
+}
+
+.spacer {
+    margin: 80px;
+}

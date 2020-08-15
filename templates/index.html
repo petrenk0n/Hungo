@@ -11,37 +11,41 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
 <body>
-      <!-- Logo -->
-      <div class="hungoLogo">
-        <h1>hungo</h1>
-      </div>
+  <!-- Logo -->
+  <div class="hungoLogo">
+    <h1>hungo</h1>
+  </div>
+  
+  <div class="cursor"></div> 
+  
+  <!-- Background video -->
+  <div class="foodVideo">
+    <video autoplay muted loop id="foodVideo">
+      <source src="../static/video.mp4" type="video/mp4">
+    </video>
+    <!-- Explanation paragraph -->
+    <div class="explanationParagraph">
+      <p>Find new restaurants <br> from an image of food.</p>
+    </div>
+  </div>
 
-      <div class="cursor"></div>
-   
-      <!-- Background video -->
-      <div class="foodVideo">
-      <video autoplay muted loop id="foodVideo">
-        <source src="../static/video.mp4" type="video/mp4">
-      </video>
-      <!-- Explanation paragraph -->
-      <div class="explanationParagraph">
-        <p>Find new restaurants <br> from an image of food.</p>
+  <!-- Scroll arrow -->
+  <div class="scrollArrow">
+    <img src="../static/scroll.svg" alt="scrolImg" id="arrowImage">
+  </div>
+
+  <!-- Drag and drop zone -->
+  <div class="secondSection">
+    <div class="dropImageZone container">
+      <form method=POST enctype=multipart/form-data action ="{{url_for('upload')}}">
+        <input type=file name=photo>
+        <input type="submit">
+      </form>
+      <div class="spacer"></div>
+      <div class="identifyButton">
+        <a href="/identify">Identify</a>
       </div>
     </div>
-
-    <!-- Scroll arrow -->
-    <div class="scrollArrow">
-      <img src="../static/scroll.svg" alt="scrolImg" id="arrowImage">
-    </div>
-
-      <!-- Drag and drop zone -->
-    <div class="secondSection">
-      <div class="dropImageZone container">
-        <form method=POST enctype=multipart/form-data action ="{{url_for('upload')}}">
-          <input type=file name=photo>
-          <input type="submit">
-        </form>
-      </div>
-    </div>
+  </div>
 </body>
 </html>

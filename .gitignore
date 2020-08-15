@@ -1,1 +1,4 @@
 .DS_Store
+config.py
+keys.json
+__pycache__
