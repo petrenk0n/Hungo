@@ -1,6 +1,12 @@
 html, body {
     height: 100%;
     max-width: auto;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "KeepCalm-Medium";
+    src: url("KeepCalm-Medium.woff");
 }
 
 .hungoLogo {
@@ -12,17 +18,18 @@ html, body {
     padding-left: 150px;
     padding-top: 50px;
     font-size: 44px;
-    
+    cursor: url(/static/pizzaCursor.png), default;
 }
 
-.cursor {
-    cursor: url(pizzaCursor.png), default !important;
+.explanationParagraph p {
+    z-index: 1;
     position: absolute;
-}
-
-@font-face {
+    top: 45%;
+    left: 35%;
     font-family: "KeepCalm-Medium";
-    src: url("KeepCalm-Medium.woff");
+    font-size: 64px;
+    color: white;
+    line-height: normal;
 }
 
 .scrollArrow {
@@ -46,47 +53,72 @@ html, body {
     filter:brightness(60%);
 }
 
-.explanationParagraph p {
-    z-index: 1;
-    position: absolute;
-    top: 45%;
-    left: 35%;
-    font-family: "KeepCalm-Medium";
-    font-size: 64px;
-    color: white;
-    line-height: normal;
-}
-
 .dropImageZone {
     border: 2px solid #EAEAEA;
     background: #EAEAEA;
     border-radius: 90px;
     padding: 100px;
-    width: 650px;
-    height: 450px;
+    width: 850px;
+    height: 600px;
     text-align: center; 
     box-shadow: -5px 10px 11px rgba(0, 0, 0, 0.25);
 }
 
-.secondSection {
-    height: 1000px;
-    margin-top: -10px;
-    padding-top: 280px;
-    padding-bottom: 280px;
-    background:#E77A7A;
+.dropFileImg {
+    height: 150px;
+    margin-bottom: 20px;
+
 }
 
-.identifyButton a {
-    text-decoration: none;
-    border: 2px solid #E77A7A;
+input[type="file"] {
+    font-family: "KeepCalm-Medium";
+    border: 2px solid #962121;
+    border-radius: 90px;
+    padding: 20px;
+    margin-top: 50px;
+    width: 300px;
+    background: #962121;
+    color: white;
+}
+
+input[type="submit"] {
+    font-family: "KeepCalm-Medium";
+    border: 2px solid #962121;
     border-radius: 90px;
     padding: 20px;
     margin-top: 50px;
     width: 200px;
-    background: #E77A7A;
+    background: #962121;
     color: white;
 }
 
+.steps {
+    color: white;
+    font-family: "KeepCalm-Medium";
+    text-align: center;
+    font-size: 50px;
+}
+
+.identifyButton a {
+    font-family: "KeepCalm-Medium";
+    text-decoration: none;
+    border: 2px solid #962121;
+    border-radius: 90px;
+    padding: 20px;
+    margin-top: 50px;
+    width: 200px;
+    background: #962121;
+    color: white;
+}
+
+.secondSection {
+    height: 1400px;
+    margin-top: -10px;
+    padding-top: 280px;
+    padding-bottom: 280px;
+    background:#962121;
+}
+
 .spacer {
-    margin: 80px;
+    margin: 40px;
 }
