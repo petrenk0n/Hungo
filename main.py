@@ -2,8 +2,12 @@ from flask import Flask, redirect, request, jsonify, render_template, current_ap
 from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
 from google.cloud import vision
 from google.cloud.vision import types
+import config
+import requests
 import os
 import io
+
+identifiedFood = None
 
 app = Flask(__name__)
 
@@ -40,7 +44,14 @@ def identify():
     print('Labels:')
     for label in labels:
         print(label.description)
+        identifiedFood = label.description
+        identifiedFood.replace(" ", "")
+        # Discover places using identified image
+        result = requests.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + identifiedFood + '&key=' + config.api_key)
+        print(result.json())
+        return render_template('index.html')
+
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(port=8000)
+    app.run(port=5000)
