@@ -53,6 +53,14 @@ html, body {
     filter:brightness(60%);
 }
 
+.secondSection {
+    height: 1400px;
+    margin-top: -10px;
+    padding-top: 280px;
+    padding-bottom: 280px;
+    background:#962121;
+}
+
 .dropImageZone {
     border: 2px solid #EAEAEA;
     background: #EAEAEA;
@@ -67,7 +75,10 @@ html, body {
 .dropFileImg {
     height: 150px;
     margin-bottom: 20px;
+}
 
+.spacer {
+    margin: 40px;
 }
 
 input[type="file"] {
@@ -109,16 +120,4 @@ input[type="submit"] {
     width: 200px;
     background: #962121;
     color: white;
-}
-
-.secondSection {
-    height: 1400px;
-    margin-top: -10px;
-    padding-top: 280px;
-    padding-bottom: 280px;
-    background:#962121;
-}
-
-.spacer {
-    margin: 40px;
 }

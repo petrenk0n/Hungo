@@ -7,7 +7,8 @@ import requests
 import os
 import io
 
-identifiedFood = None
+identified_food = None
+array_of_locations = [[],[],[]]
 
 app = Flask(__name__)
 
@@ -29,6 +30,7 @@ def upload():
         return render_template('index.html')
     return render_template('index.html')
 
+# Identify object route
 @app.route('/identify', methods=['GET'])
 def identify():
     # Loads the image into memory
@@ -44,14 +46,20 @@ def identify():
     print('Labels:')
     for label in labels:
         print(label.description)
-        identifiedFood = label.description
-        identifiedFood.replace(" ", "")
-        # Discover places using identified image
-        result = requests.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + identifiedFood + '&key=' + config.api_key)
-        print(result.json())
-        return render_template('index.html')
+        identified_food = label.description
+        identified_food.replace(" ", "")
+        
+        # Make request to Places API
+        result = requests.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + identified_food + '&key=' + config.api_key)
+        # print(result.json())
 
-    return render_template('index.html')
+        # Show top 3 locations
+        for i in range(3):
+            array_of_locations[i].append(result.json()["results"][i]["geometry"]["location"]["lat"])
+            array_of_locations[i].append(result.json()["results"][i]["geometry"]["location"]["lng"])
+        print(array_of_locations)
+        return render_template('index.html')
+    return render_template('index.html', locations = array_of_locations)
 
 if __name__ == '__main__':
     app.run(port=5000)
